@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Ball_Movement : MonoBehaviour
 {
+    float walkspeed = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,22 +16,22 @@ public class Ball_Movement : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.UpArrow)) 
-        transform.position += transform.forward * Time.deltaTime;
+        transform.position +=walkspeed* transform.forward * Time.deltaTime;
 
         if (Input.GetKey(KeyCode.LeftArrow))
-        transform.position += (new Vector3(-1, 0, 0)) * Time.deltaTime;
+        transform.position -=walkspeed* transform.right * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.D))
             transform.Rotate(Vector3.up, 180 * Time.deltaTime);
 
         if (Input.GetKey(KeyCode.RightArrow))
-            transform.position += (new Vector3(1, -0, 0)) * Time.deltaTime;
+            transform.position +=walkspeed* transform.right* Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.A))
             transform.Rotate(Vector3.up, -180 * Time.deltaTime);
 
         if (Input.GetKey(KeyCode.DownArrow))
-            transform.position -= transform.forward * Time.deltaTime;
+            transform.position -=walkspeed* transform.forward * Time.deltaTime;
 
      
     }

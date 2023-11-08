@@ -4,19 +4,35 @@ using UnityEngine;
 
 public class kick : MonoBehaviour
 {
-    RigidBody rb;
-    float kickStrength = 10
+    Rigidbody rb;
+    float kickStrength = 5;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<RigidBody>()
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
-        rb.AddForce(kickStrength*Vector3.up, ForceMode.Impulse);
+ 
+    }
 
+
+    void KickBall(Transform character)
+    {
+        rb.AddForce(kickStrength * character.forward, ForceMode.Impulse);
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Plane")
+        { print("Boing"); }
+        else
+        {
+            print("Ouch");
+            KickBall(collision.transform);
+        }
     }
 }
