@@ -905,7 +905,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4862358341001206553}
   - component: {fileID: 4862358341015292419}
-  - component: {fileID: 3910271835413927699}
   m_Layer: 0
   m_Name: zombie_zombie4
   m_TagString: Untagged
@@ -1009,18 +1008,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.2262297, y: 0.003887251, z: 0}
     m_Extent: {x: 0.5237266, y: 0.20348991, z: 0.30575648}
   m_DirtyAABB: 0
---- !u!114 &3910271835413927699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4862358341001627513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97895a69d69c9914b9c0f66d60a1e8fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4862358341001627515
 GameObject:
   m_ObjectHideFlags: 0

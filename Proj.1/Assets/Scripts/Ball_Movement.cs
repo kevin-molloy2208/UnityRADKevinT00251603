@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Ball_Movement : MonoBehaviour
 {
+    public Transform ballCloneTemplate;
     float walkspeed = 3;
     // Start is called before the first frame update
     void Start()
@@ -34,5 +35,14 @@ public class Ball_Movement : MonoBehaviour
             transform.position -=walkspeed* transform.forward * Time.deltaTime;
 
      
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Transform newBall = Instantiate(ballCloneTemplate, transform.position + transform.forward,
+                Quaternion.identity);
+            kick myNewBallScript =
+                newBall.GetComponent<kick>();
+
+            myNewBallScript.KickBall(transform);
+        }
     }
 }
