@@ -6,7 +6,7 @@ public class zombieControllScript : MonoBehaviour
 {
     Ball_Movement player;
     Animator zombieAnimator;
-    enum ZombieState { Idle, Attack, Follow }
+    enum ZombieState { Idle, Attack, Follow, Dead }
     ZombieState currentlyIs = ZombieState.Idle;
     private float aggroRadius = 10;
     private float walkingSpeed = 0.3f;
@@ -57,7 +57,16 @@ public class zombieControllScript : MonoBehaviour
                 }
                 break;
 
-        
+            case ZombieState.Dead:
+
+
+                break;
+
+                UnityEditorInternal void dieNow()
+                {
+                    zombieAnimator.SetBool("IsDead")
+
+                }
         }
     }
 }
