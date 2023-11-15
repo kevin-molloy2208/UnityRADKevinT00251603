@@ -12,7 +12,7 @@ public class zombieManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < numberOfZombies; i++) 
+        for (int i = 0; i < numberOfZombies; i++)
         {
             Vector3 position = new Vector3
                 (
@@ -29,6 +29,6 @@ public class zombieManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

@@ -61,12 +61,18 @@ public class zombieControllScript : MonoBehaviour
 
 
                 break;
-
-                UnityEditorInternal void dieNow()
-                {
-                    zombieAnimator.SetBool("IsDead")
-
-                }
         }
+
+
     }
+
+    internal void dieNow()
+    {
+        zombieAnimator.SetBool("isDead", true);
+        Destroy(gameObject, 5);
+        currentlyIs = ZombieState.Dead;
+    }
+
+
 }
+    

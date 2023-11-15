@@ -8,6 +8,7 @@ public class kick : MonoBehaviour
     Animator zombieAnimator;
     Rigidbody rb;
     float kickStrength = 50;
+    public static int killCount = 0;
     // Start is called before the first frame update
     void Awake()
     {
@@ -17,6 +18,7 @@ public class kick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
     }
 
 
@@ -29,7 +31,7 @@ public class kick : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "Plane")
-        { print("Boing"); }
+        {}
      
         else
         {
@@ -37,10 +39,13 @@ public class kick : MonoBehaviour
                 collision.gameObject.GetComponent<zombieControllScript>();
             if (testIfZombie != null) 
             {
-                Destroy(gameObject, 5);
+                testIfZombie.dieNow();
+                Destroy(gameObject);
+                killCount= killCount+1;
             }
-            print("Ouch");
+            print(+killCount);
             KickBall(collision.transform);
+
         }
     }
 }
