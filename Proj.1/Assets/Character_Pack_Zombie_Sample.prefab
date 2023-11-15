@@ -1020,6 +1020,7 @@ GameObject:
   - component: {fileID: 4862358341010994371}
   - component: {fileID: 6763797149289366704}
   - component: {fileID: 2132291218340058636}
+  - component: {fileID: -918329195577862842}
   m_Layer: 0
   m_Name: Character_Pack_Zombie_Sample
   m_TagString: Untagged
@@ -1075,10 +1076,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.23
-  m_Height: 1.64
+  m_Radius: 0.31
+  m_Height: 1.27
   m_Direction: 1
-  m_Center: {x: 0, y: 0.75, z: 0}
+  m_Center: {x: 0, y: 0.47, z: 0}
 --- !u!114 &2132291218340058636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1091,3 +1092,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97895a69d69c9914b9c0f66d60a1e8fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &-918329195577862842
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4862358341001627515}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 2
