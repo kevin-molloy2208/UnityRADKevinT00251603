@@ -30,8 +30,12 @@ public class kick : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Plane")
-        {}
+        targetController testIfTarget =
+            collision.gameObject.GetComponent<targetController>();
+        if (testIfTarget != null)
+        {
+            Destroy(gameObject);
+        }
      
         else
         {
@@ -45,6 +49,8 @@ public class kick : MonoBehaviour
             }
             print(+killCount);
             KickBall(collision.transform);
+
+            
 
         }
     }

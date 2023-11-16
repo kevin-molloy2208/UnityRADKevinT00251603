@@ -28,6 +28,13 @@ public class Ball_Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
             transform.position +=walkspeed* transform.right* Time.deltaTime;
 
+
+        if (Input.GetKey(KeyCode.W))
+            transform.Rotate(-1, 0, 0 * Time.deltaTime);
+
+        if (Input.GetKey(KeyCode.S))
+            transform.Rotate(1, 0, 0 * Time.deltaTime);
+
         if (Input.GetKey(KeyCode.A))
             transform.Rotate(Vector3.up, -180 * Time.deltaTime);
 

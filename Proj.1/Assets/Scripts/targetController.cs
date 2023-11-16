@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class targetControl : MonoBehaviour
+public class targetController : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,11 +17,10 @@ public class targetControl : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Soccer Ball Mesh")
+        if (collision.gameObject.name == "Target")
        
         {   
             print("Well Done");
-            Destroy(gameObject);
         }
     }
          
